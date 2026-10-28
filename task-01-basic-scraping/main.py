@@ -51,7 +51,7 @@ def extract_content(html: str, base_url: str) -> dict:
     seen_urls = set()
     for a in soup.find_all("a", href=True):
         href = a.get("href", "").strip()
-        if not href or href.startswith("javascript:") or href == "#":
+        if not href or href.startswith("javascript:") or href.startswith("#"):
             continue
         absolute_url = urljoin(base_url, href)
         if absolute_url not in seen_urls:
