@@ -1,0 +1,119 @@
+{
+  "source_url": "http://books.toscrape.com/",
+  "total_discovered": 20,
+  "requested_count": 10,
+  "successful_downloads": 10,
+  "images_directory": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images",
+  "downloaded_images": [
+    {
+      "index": 1,
+      "alt_text": "A Light in the Attic",
+      "raw_src": "media/cache/2c/da/2cdad67c44b002e7ead0cc35693c0e8b.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/2c/da/2cdad67c44b002e7ead0cc35693c0e8b.jpg",
+      "filename": "01_a-light-in-the-attic.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/01_a-light-in-the-attic.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 9876
+    },
+    {
+      "index": 2,
+      "alt_text": "Tipping the Velvet",
+      "raw_src": "media/cache/26/0c/260c6ae16bce31c8f8c95daddd9f4a1c.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/26/0c/260c6ae16bce31c8f8c95daddd9f4a1c.jpg",
+      "filename": "02_tipping-the-velvet.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/02_tipping-the-velvet.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 7095
+    },
+    {
+      "index": 3,
+      "alt_text": "Soumission",
+      "raw_src": "media/cache/3e/ef/3eef99c9d9adef34639f510662022830.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/3e/ef/3eef99c9d9adef34639f510662022830.jpg",
+      "filename": "03_soumission.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/03_soumission.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 4062
+    },
+    {
+      "index": 4,
+      "alt_text": "Sharp Objects",
+      "raw_src": "media/cache/32/51/3251cf3a3412f53f339e42cac2134093.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/32/51/3251cf3a3412f53f339e42cac2134093.jpg",
+      "filename": "04_sharp-objects.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/04_sharp-objects.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 8442
+    },
+    {
+      "index": 5,
+      "alt_text": "Sapiens: A Brief History of Humankind",
+      "raw_src": "media/cache/be/a5/bea5697f2534a2f86a3ef27b5a8c12a6.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/be/a5/bea5697f2534a2f86a3ef27b5a8c12a6.jpg",
+      "filename": "05_sapiens-a-brief-history-of-humankind.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/05_sapiens-a-brief-history-of-humankind.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 7986
+    },
+    {
+      "index": 6,
+      "alt_text": "The Requiem Red",
+      "raw_src": "media/cache/68/33/68339b4c9bc034267e1da611ab3b34f8.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/68/33/68339b4c9bc034267e1da611ab3b34f8.jpg",
+      "filename": "06_the-requiem-red.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/06_the-requiem-red.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 9798
+    },
+    {
+      "index": 7,
+      "alt_text": "The Dirty Little Secrets of Getting Your Dream Job",
+      "raw_src": "media/cache/92/27/92274a95b7c251fea59a2b8a78275ab4.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/92/27/92274a95b7c251fea59a2b8a78275ab4.jpg",
+      "filename": "07_the-dirty-little-secrets-of-getting-your-dream-job.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/07_the-dirty-little-secrets-of-getting-your-dream-job.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 10740
+    },
+    {
+      "index": 8,
+      "alt_text": "The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull",
+      "raw_src": "media/cache/3d/54/3d54940e57e662c4dd1f3ff00c78cc64.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/3d/54/3d54940e57e662c4dd1f3ff00c78cc64.jpg",
+      "filename": "08_the-coming-woman-a-novel-based-on-the-life-of-the-.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/08_the-coming-woman-a-novel-based-on-the-life-of-the-.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 9693
+    },
+    {
+      "index": 9,
+      "alt_text": "The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
+      "raw_src": "media/cache/66/88/66883b91f6804b2323c8369331cb7dd1.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/66/88/66883b91f6804b2323c8369331cb7dd1.jpg",
+      "filename": "09_the-boys-in-the-boat-nine-americans-and-their-epic.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/09_the-boys-in-the-boat-nine-americans-and-their-epic.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 8783
+    },
+    {
+      "index": 10,
+      "alt_text": "The Black Maria",
+      "raw_src": "media/cache/58/46/5846057e28022268153beff6d352b06c.jpg",
+      "absolute_url": "http://books.toscrape.com/media/cache/58/46/5846057e28022268153beff6d352b06c.jpg",
+      "filename": "10_the-black-maria.jpg",
+      "local_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-02-image-scraping/images/10_the-black-maria.jpg",
+      "status": "success",
+      "content_type": "image/jpeg",
+      "size_bytes": 3915
+    }
+  ]
+}
