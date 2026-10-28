@@ -16,8 +16,8 @@ def parse_youtube_subscriptions(html_content: str, base_url: str = "https://www.
     # Pattern to detect subscriber count strings (e.g., "11.9M subscribers", "621K subscribers")
     sub_pattern = re.compile(r"(\d+(?:\.\d+)?\s*[KMBkmb]?\s*subscribers?)", re.IGNORECASE)
 
-    # 1. Parse standard YouTube web renderer elements (<ytd-channel-renderer>)
-    renderers = soup.find_all(["ytd-channel-renderer", "div"], class_=lambda c: c and ("ytd-item-section-renderer" in c or "subscription-item" in c))
+    # 1. Parse standard YouTube web renderer elements (<ytd-channel-renderer>) and subscription divs
+    renderers = soup.find_all("ytd-channel-renderer") + soup.find_all("div", class_=lambda c: c and any(k in c for k in ["subscription-item", "channel-item"]))
 
     for item in renderers:
         # Locate the primary channel link
