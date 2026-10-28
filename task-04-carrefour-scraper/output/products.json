@@ -1,0 +1,82 @@
+[
+  {
+    "product_name": "Nestle Pure Life Mineral Water 1.5L",
+    "product_price": "12.50 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/beverages/water/nestle-pure-life-water-1-5l/p/102931",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/nestle_water_1_5l.jpg",
+    "discount_price": "15.00 EGP",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Juhayna Full Cream Milk 1L",
+    "product_price": "44.00 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/dairy-eggs/milk/juhayna-full-cream-milk-1l/p/104928",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/juhayna_milk_1l.jpg",
+    "discount_price": "N/A",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Lipton Yellow Label Black Tea - 100 Tea Bags",
+    "product_price": "115.00 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/beverages/hot-drinks/lipton-yellow-label-tea-100-bags/p/204812",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/lipton_tea_100_bags.jpg",
+    "discount_price": "130.00 EGP",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Heinz Tomato Ketchup Squeeze Bottle 340g",
+    "product_price": "52.50 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/pantry/condiments/heinz-tomato-ketchup-340g/p/301928",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/heinz_ketchup_340g.jpg",
+    "discount_price": "N/A",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Crystal Pure White Ghee 1.5kg",
+    "product_price": "189.95 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/cooking-essentials/oil-ghee/crystal-pure-white-ghee-1-5kg/p/409182",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/crystal_white_ghee_1_5kg.jpg",
+    "discount_price": "210.00 EGP",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Barilla Spaghetti No. 5 Pasta 500g",
+    "product_price": "48.00 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/rice-pasta-pulses/pasta/barilla-spaghetti-n-5-500g/p/501293",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/barilla_spaghetti_500g.jpg",
+    "discount_price": "N/A",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Nutella Hazelnut Spread with Cocoa 350g",
+    "product_price": "145.00 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/breakfast-spreads/chocolate-spreads/nutella-hazelnut-spread-350g/p/609384",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/nutella_spread_350g.jpg",
+    "discount_price": "165.00 EGP",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Almarai Plain Greek Yogurt 170g",
+    "product_price": "32.00 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/dairy-eggs/yogurt/almarai-plain-greek-yogurt-170g/p/702918",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/almarai_greek_yogurt_170g.jpg",
+    "discount_price": "N/A",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Persil Deep Clean Gel Lavender Scent 3L",
+    "product_price": "220.00 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/cleaning-household/laundry-care/persil-deep-clean-gel-lavender-3l/p/804912",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/persil_gel_3l.jpg",
+    "discount_price": "255.00 EGP",
+    "product_category": "Beverages & Pantry"
+  },
+  {
+    "product_name": "Ariel Automatic Detergent Powder with Touch of Downy 2.5kg",
+    "product_price": "235.00 EGP",
+    "product_url": "https://www.carrefouregypt.com/mafegy/en/cleaning-household/laundry-care/ariel-automatic-laundry-powder-2-5kg/p/903817",
+    "product_image": "https://cdnprod.mafretailproxy.com/assets/images/ariel_powder_2_5kg.jpg",
+    "discount_price": "N/A",
+    "product_category": "Beverages & Pantry"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "input_source": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-04-carrefour-scraper/data/sample_carrefour_category.html",
+  "source_type": "sample_fixture",
+  "total_products": 10,
+  "discounted_products": 5,
+  "csv_output": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-04-carrefour-scraper/output/products.csv",
+  "json_output": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-04-carrefour-scraper/output/products.json"
+}

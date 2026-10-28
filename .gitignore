@@ -35,8 +35,11 @@ scratch/
 tmp/
 *.tmp
 
-# User personal data exports (Task 3)
+# User personal data exports (Task 3 & Task 4)
 task-03-youtube-subscriptions/data/subscriptions.html
 task-03-youtube-subscriptions/data/subscriptions*.html
 !task-03-youtube-subscriptions/data/sample_subscriptions.html
 subscriptions.html
+task-04-carrefour-scraper/data/carrefour_category.html
+task-04-carrefour-scraper/data/carrefour_category*.html
+!task-04-carrefour-scraper/data/sample_carrefour_category.html
