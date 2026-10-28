@@ -11,7 +11,7 @@ This document tracks implementation status, verification results, and commit his
 | **Setup** | Repository, Environment & Git Workflow | **Completed** | `901108c`, `6651b74`, `593ab63` | `.venv` verified with Miniconda Python 3.14.8 |
 | **Task 1** | Basic Website Scraping | **Completed** | `0620481`, `86a6d09`, `9d8529d`, `e69e49a` | 6/6 tests passing, 73 links, 21 headings in JSON |
 | **Task 2** | Image Scraping | **Completed** | `1243508`, `2a7979e`, `f3cfea3`, `88e6880` | 7/7 tests passing, 10 genuine JPEGs downloaded, manifest JSON saved |
-| **Task 3** | YouTube Subscription Information | Pending | — | — |
+| **Task 3** | YouTube Subscription Information | **Completed** | `0add279`, `9a686d4`, `753a915` | 6/6 tests passing, 8 channels extracted to Pandas & CSV |
 | **Task 4** | Carrefour Product Scraping | Pending | — | — |
 | **Task 5** | Facebook Automation Using Selenium | Pending | — | — |
 | **Task 6** | Schedule Automatic Code Execution (15:00) | Pending | — | — |
@@ -47,12 +47,12 @@ This document tracks implementation status, verification results, and commit his
   - [x] Generate download manifest
   - [x] Verify images and save screenshots
   - [x] Task README and individual commits
-- [ ] **Task 3: YouTube Subscription Information**
-  - [ ] Parse channel metadata (Name, URL, Subscriber count) using BeautifulSoup
-  - [ ] Load structured records into a Pandas DataFrame
-  - [ ] Export results to CSV
-  - [ ] Document authorized access compliance and limitations
-  - [ ] Task README and individual commits
+- [x] **Task 3: YouTube Subscription Information**
+  - [x] Parse channel metadata (Name, URL, Subscriber count) using BeautifulSoup
+  - [x] Load structured records into a Pandas DataFrame
+  - [x] Export results to CSV
+  - [x] Document authorized access compliance and limitations
+  - [x] Task README and individual commits
 - [ ] **Task 4: Carrefour Product Scraping**
   - [ ] Target category page catalog
   - [ ] Extract Product Name, Price, Product URL
