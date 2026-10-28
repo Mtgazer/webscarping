@@ -86,6 +86,11 @@ def download_image(image_url: str, destination_path: str, timeout: int = 10) -> 
 
         return True, content_type, total_bytes, ""
     except requests.exceptions.RequestException as e:
+        if os.path.exists(destination_path):
+            try:
+                os.remove(destination_path)
+            except OSError:
+                pass
         return False, "", 0, str(e)
 
 
@@ -94,29 +99,36 @@ def process_image_downloads(
     images_dir: str,
     target_count: int = 10
 ) -> list[dict]:
-    """Download at least target_count images and build a manifest report."""
+    """Download up to target_count successful images and build a manifest report."""
     os.makedirs(images_dir, exist_ok=True)
     results = []
+    success_count = 0
 
-    for idx, item in enumerate(images[:target_count], start=1):
-        filename = f"{idx:02d}_{sanitize_filename(item['alt_text'], fallback=f'image_{idx}', ext=item['extension'])}"
+    for item in images:
+        if success_count >= target_count:
+            break
+
+        current_index = success_count + 1
+        filename = f"{current_index:02d}_{sanitize_filename(item['alt_text'], fallback=f'image_{current_index}', ext=item['extension'])}"
         local_filepath = os.path.join(images_dir, filename)
 
         success, content_type, size_bytes, error = download_image(item["absolute_url"], local_filepath)
 
         record = {
-            "index": idx,
+            "index": current_index if success else None,
             "alt_text": item["alt_text"],
             "raw_src": item["raw_src"],
             "absolute_url": item["absolute_url"],
-            "filename": filename,
-            "local_path": local_filepath,
+            "filename": filename if success else "",
+            "local_path": local_filepath if success else "",
             "status": "success" if success else "failed",
             "content_type": content_type,
             "size_bytes": size_bytes
         }
         if not success:
             record["error"] = error
+        else:
+            success_count += 1
 
         results.append(record)
 
@@ -144,8 +156,10 @@ def display_summary(manifest: dict) -> None:
     print("-" * 65)
 
     for item in manifest["downloaded_images"]:
+        idx_str = f"{item['index']:<3}" if item.get("index") is not None else " - "
+        fname = item["filename"] if item["filename"] else (item["raw_src"][:35])
         size_str = f"{item['size_bytes']:,} B" if item["status"] == "success" else "0 B"
-        print(f"{item['index']:<3} | {item['filename'][:35]:<35} | {size_str:<10} | {item['status'].upper()}")
+        print(f"{idx_str} | {fname[:35]:<35} | {size_str:<10} | {item['status'].upper()}")
 
     print("=" * 65)
 

@@ -121,6 +121,53 @@ class TestImageScraper(unittest.TestCase):
         self.assertEqual(results[0]["filename"], "01_book-title-1.jpg")
         self.assertEqual(results[9]["filename"], "10_book-title-10.jpg")
 
+    @patch("main.download_image")
+    def test_process_image_downloads_with_failure_advancement(self, mock_download):
+        # Candidate 2 fails; others succeed
+        def side_effect(url, path):
+            if "fail" in url:
+                return (False, "", 0, "404 Not Found")
+            return (True, "image/jpeg", 4000, "")
+
+        mock_download.side_effect = side_effect
+
+        mock_images = [
+            {
+                "index": i,
+                "alt_text": f"Book Title {i}",
+                "raw_src": f"media/cover_{i}.jpg",
+                "absolute_url": f"http://books.toscrape.com/media/fail_{i}.jpg" if i == 2 else f"http://books.toscrape.com/media/cover_{i}.jpg",
+                "extension": ".jpg"
+            }
+            for i in range(1, 15)
+        ]
+
+        results = process_image_downloads(mock_images, self.test_tmp_dir, target_count=10)
+
+        # 10 successes + 1 failure = 11 attempts
+        self.assertEqual(len(results), 11)
+        successes = [r for r in results if r["status"] == "success"]
+        failures = [r for r in results if r["status"] == "failed"]
+
+        self.assertEqual(len(successes), 10)
+        self.assertEqual(len(failures), 1)
+        self.assertEqual(failures[0]["raw_src"], "media/cover_2.jpg")
+        # Indices should still be sequential 1 through 10
+        self.assertEqual([s["index"] for s in successes], list(range(1, 11)))
+
+    @patch("requests.get")
+    def test_download_image_cleans_up_on_failure(self, mock_get):
+        import requests
+        mock_get.side_effect = requests.exceptions.ConnectionError("Connection dropped")
+
+        dest_file = os.path.join(self.test_tmp_dir, "failed_image.jpg")
+        # Pre-create or verify file is cleaned up
+        success, content_type, size, err = download_image("http://example.com/fail.jpg", dest_file)
+
+        self.assertFalse(success)
+        self.assertFalse(os.path.exists(dest_file))
+        self.assertIn("Connection dropped", err)
+
     def test_save_manifest(self):
         manifest_data = {
             "source_url": "http://example.com",
