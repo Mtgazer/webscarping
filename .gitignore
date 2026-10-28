@@ -34,3 +34,9 @@ Thumbs.db
 scratch/
 tmp/
 *.tmp
+
+# User personal data exports (Task 3)
+task-03-youtube-subscriptions/data/subscriptions.html
+task-03-youtube-subscriptions/data/subscriptions*.html
+!task-03-youtube-subscriptions/data/sample_subscriptions.html
+subscriptions.html
