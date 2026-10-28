@@ -1,0 +1,7 @@
+# Session 10 Python Automation - Dependencies
+# Python >= 3.10
+# Installed and synchronized with .venv
+
+# Web scraping & HTML parsing (Task 1, Task 2, Task 3, Task 4)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
