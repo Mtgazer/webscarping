@@ -17,7 +17,7 @@ def parse_youtube_subscriptions(html_content: str, base_url: str = "https://www.
     sub_pattern = re.compile(r"(\d+(?:\.\d+)?\s*[KMBkmb]?\s*subscribers?)", re.IGNORECASE)
 
     # 1. Parse standard YouTube web renderer elements (<ytd-channel-renderer>) and subscription divs
-    renderers = soup.find_all("ytd-channel-renderer") + soup.find_all("div", class_=lambda c: c and any(k in c for k in ["subscription-item", "channel-item"]))
+    renderers = soup.find_all("ytd-channel-renderer") + soup.find_all("div", class_=lambda c: c and any(k in c for k in ["subscription-item", "channel-item", "ytd-channel-renderer"]))
 
     for item in renderers:
         # Locate the primary channel link
@@ -37,8 +37,8 @@ def parse_youtube_subscriptions(html_content: str, base_url: str = "https://www.
         if channel_url in seen_urls:
             continue
 
-        # Channel name extraction
-        name_tag = item.find(["span", "h3", "div"], id=lambda i: i in ["text", "channel-title", "title"])
+        # Channel name extraction (including native YouTube <yt-formatted-string> web components)
+        name_tag = item.find(["span", "h3", "div", "yt-formatted-string"], id=lambda i: i in ["text", "channel-title", "title"])
         if name_tag:
             channel_name = name_tag.get_text(strip=True)
         else:
@@ -49,7 +49,7 @@ def parse_youtube_subscriptions(html_content: str, base_url: str = "https://www.
 
         # Subscriber count extraction (where publicly shown)
         subscriber_count = "N/A"
-        sub_tag = item.find(["span", "div"], id=lambda i: i in ["subscribers", "video-count"]) or item.find(class_=lambda c: c and "sub" in c)
+        sub_tag = item.find(["span", "div", "yt-formatted-string"], id=lambda i: i in ["subscribers", "video-count"]) or item.find(class_=lambda c: c and "sub" in c)
         if sub_tag:
             text = sub_tag.get_text(strip=True)
             match = sub_pattern.search(text)

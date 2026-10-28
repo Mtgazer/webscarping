@@ -59,6 +59,21 @@ class TestYouTubeParser(unittest.TestCase):
         urls = [r["channel_url"] for r in records]
         self.assertEqual(urls, ["https://www.youtube.com/@TestChannelA", "https://www.youtube.com/@TestChannelB"])
 
+    def test_native_yt_formatted_string_support(self):
+        polymer_html = """
+        <ytd-channel-renderer>
+          <a href="/@PolymerTech">
+            <yt-formatted-string id="text">Polymer Tech</yt-formatted-string>
+            <yt-formatted-string id="video-count">3.5M subscribers</yt-formatted-string>
+          </a>
+        </ytd-channel-renderer>
+        """
+        records = parse_youtube_subscriptions(polymer_html)
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0]["channel_name"], "Polymer Tech")
+        self.assertEqual(records[0]["subscriber_count"], "3.5M subscribers")
+        self.assertEqual(records[0]["channel_url"], "https://www.youtube.com/@PolymerTech")
+
     def test_subscriber_count_handling(self):
         records = parse_youtube_subscriptions(MINI_HTML)
         self.assertEqual(records[0]["subscriber_count"], "100K subscribers")
