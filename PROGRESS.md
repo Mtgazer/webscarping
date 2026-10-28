@@ -10,7 +10,7 @@ This document tracks implementation status, verification results, and commit his
 | :--- | :--- | :--- | :--- | :--- |
 | **Setup** | Repository, Environment & Git Workflow | **Completed** | `901108c`, `6651b74`, `593ab63` | `.venv` verified with Miniconda Python 3.14.8 |
 | **Task 1** | Basic Website Scraping | **Completed** | `0620481`, `86a6d09`, `9d8529d`, `e69e49a` | 6/6 tests passing, 73 links, 21 headings in JSON |
-| **Task 2** | Image Scraping | **Completed** | `1243508`, `2a7979e`, `f3cfea3` | 5/5 tests passing, 10 genuine JPEGs downloaded, manifest JSON saved |
+| **Task 2** | Image Scraping | **Completed** | `1243508`, `2a7979e`, `f3cfea3`, `88e6880` | 7/7 tests passing, 10 genuine JPEGs downloaded, manifest JSON saved |
 | **Task 3** | YouTube Subscription Information | Pending | — | — |
 | **Task 4** | Carrefour Product Scraping | Pending | — | — |
 | **Task 5** | Facebook Automation Using Selenium | Pending | — | — |
