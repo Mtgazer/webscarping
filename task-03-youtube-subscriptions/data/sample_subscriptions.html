@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>YouTube Subscriptions Export (Sample Fixture)</title>
+</head>
+<body>
+  <div id="content" class="style-scope ytd-app">
+    <h1>All Subscriptions</h1>
+    <div id="contents" class="style-scope ytd-section-list-renderer">
+      
+      <!-- Channel 1: FreeCodeCamp -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="/@freecodecamp">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">freeCodeCamp.org</span>
+            </h3>
+            <div id="metadata">
+              <span id="video-count">11.9M subscribers</span>
+              <span id="description">Learn to code for free. Open-source curriculum.</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Channel 2: 3Blue1Brown -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="/@3blue1brown">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">3Blue1Brown</span>
+            </h3>
+            <div id="metadata">
+              <span id="subscribers">8.65M subscribers</span>
+              <span id="description">Animated math explanations.</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Channel 3: Jeremy's IT Lab -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="/@JeremysITLab">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">Jeremy's IT Lab</span>
+            </h3>
+            <div id="metadata">
+              <span id="subscribers">621K subscribers</span>
+              <span id="description">Free Cisco CCNA and networking tutorials.</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Channel 4: Python Software Foundation (No public sub count shown) -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="https://www.youtube.com/@ThePSF">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">The Python Software Foundation</span>
+            </h3>
+            <div id="metadata">
+              <span id="description">Official channel of the Python Software Foundation.</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Channel 5: MIT OpenCourseWare -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="/channel/UCEBb1b_L6zDS3xTUrIALZOw">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">MIT OpenCourseWare</span>
+            </h3>
+            <div id="metadata">
+              <span id="video-count">5.2M subscribers</span>
+              <span id="description">MIT course video lectures and educational materials.</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Channel 6: Computerphile -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="/@Computerphile">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">Computerphile</span>
+            </h3>
+            <div id="metadata">
+              <span id="subscribers">2.45M subscribers</span>
+              <span id="description">Videos about computers and computer stuff.</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Channel 7: Sentdex -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="/@sentdex">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">sentdex</span>
+            </h3>
+            <div id="metadata">
+              <span id="subscribers">1.44M subscribers</span>
+              <span id="description">Python Programming tutorials.</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Duplicate Entry of freeCodeCamp (to verify deduplication) -->
+      <ytd-channel-renderer class="style-scope ytd-item-section-renderer">
+        <a id="main-link" class="channel-link" href="/@freecodecamp">
+          <div id="info-section">
+            <h3 id="channel-title">
+              <span id="text">freeCodeCamp.org</span>
+            </h3>
+            <div id="metadata">
+              <span id="video-count">11.9M subscribers</span>
+            </div>
+          </div>
+        </a>
+      </ytd-channel-renderer>
+
+      <!-- Standard HTML table/list fallback format (e.g., Takeout format) -->
+      <div class="generic-subscriptions-list">
+        <div class="subscription-item">
+          <a class="channel-link" href="https://www.youtube.com/@GoogleDevelopers">Google for Developers</a>
+          <span class="sub-count">2.67M subscribers</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

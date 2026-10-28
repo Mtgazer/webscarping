@@ -1,0 +1,8 @@
+{
+  "input_source": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-03-youtube-subscriptions/data/sample_subscriptions.html",
+  "source_type": "sample_fixture",
+  "total_channels": 8,
+  "channels_with_subscriber_count": 7,
+  "channels_without_subscriber_count": 1,
+  "csv_output": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-03-youtube-subscriptions/output/youtube_subscriptions.csv"
+}
