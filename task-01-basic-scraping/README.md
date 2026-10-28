@@ -163,13 +163,26 @@ Total Links      : 73
 
 ---
 
-## Screenshot References
+## Web Browser vs. HTTP Scraping
+This scraper utilizes `requests` and `BeautifulSoup` to send raw HTTP `GET` requests directly to the web server and parse the received HTML bytes. Because it operates at the network protocol layer:
+- It does **not** launch or require a graphical browser to collect data.
+- It is significantly faster and consumes fewer system resources than a browser engine.
 
-- **Program Execution & Output Summary**:
-  ![Task 1 Execution](./screenshots/task_01_execution.png)
+To inspect the live target webpage visually in your installed Google Chrome browser on Ubuntu, run:
+```bash
+google-chrome "http://books.toscrape.com/" &
+```
 
-- **Unit Test Suite & JSON Output Preview**:
-  ![Task 1 Tests & JSON](./screenshots/task_01_tests_and_json.png)
+---
+
+## Screenshot Evidence & Verification
+Under Ubuntu Linux with Wayland (`XDG_SESSION_TYPE=wayland`), background processes cannot take automated desktop screenshots without interactive user portal permissions. To capture authentic screenshot evidence for your submission:
+1. Run the scraper interactively in your terminal:
+   ```bash
+   python task-01-basic-scraping/main.py
+   ```
+2. Press `Shift + PrintScreen` (or use GNOME Screenshot) to capture your terminal window showing the output summary and the browser displaying the webpage.
+3. Save the image inside [`screenshots/`](./screenshots/).
 
 ---
 
