@@ -1,0 +1,16 @@
+{
+  "latest_backup": {
+    "archive_name": "backup_20261029_112604.tar.gz",
+    "archive_path": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-08-cron-research/backups/backup_20261029_112604.tar.gz",
+    "source_dir": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-08-cron-research/data/sample_payload",
+    "files_archived": 3,
+    "size_bytes": 707,
+    "sha256": "49e96a3b6eda506c2b31a19d395575ec49fd289f24c04359e23c47185245557a",
+    "created_at": "2026-10-29 11:26:04 EEST"
+  },
+  "active_backups_count": 1,
+  "active_backups": [
+    "backup_20261029_112604.tar.gz"
+  ],
+  "pruned_in_this_run": []
+}

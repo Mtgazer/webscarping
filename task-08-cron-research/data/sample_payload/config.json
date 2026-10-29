@@ -1,0 +1,7 @@
+{
+  "system_id": "SYS-CRON-808",
+  "environment": "production",
+  "backup_enabled": true,
+  "retention_days": 7,
+  "notification_channel": "admin@example.com"
+}

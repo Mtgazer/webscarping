@@ -1,0 +1,4 @@
+id,date,description,amount,currency
+TX-001,2026-10-25,Domain Hosting Renewal,24.50,USD
+TX-002,2026-10-26,Cloud Server Compute,185.00,USD
+TX-003,2026-10-28,API Gateway Usage,42.10,USD

@@ -1,0 +1,5 @@
+[2026-10-29 11:26:04 EEST] [INFO] Backup job started (Trigger: Scheduled Cron Backup Job)
+[2026-10-29 11:26:04 EEST] [INFO] Archiving source: /run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-08-cron-research/data/sample_payload
+[2026-10-29 11:26:04 EEST] [SUCCESS] Created archive: backup_20261029_112604.tar.gz (3 files, 707 bytes, SHA-256: 49e96a3b6eda...)
+[2026-10-29 11:26:04 EEST] [INFO] Retention policy checked: 0 archives pruned (within 7 limit)
+[2026-10-29 11:26:04 EEST] [SUCCESS] Backup job finished successfully. Active archives: 1
