@@ -16,7 +16,7 @@ This document tracks implementation status, verification results, and commit his
 | **Task 5** | Facebook Automation Using Selenium | **Completed** | `03ecfd2`, `2a80ce4`, `e105c67` | 8/8 tests passing, driver setup, composer staging, dry-run & interactive safety gate verified |
 | **Task 6** | Schedule Automatic Code Execution (15:00) | **Script & Tests Verified (Cron Pending Review)** | `ee7d08b`, `3305b87`, `041bbf2` | 6/6 tests passing, manual execution verified, crontab expression prepared for review |
 | **Task 7** | RPA Research & Practical Workflow | **Completed** | `c471577`, `67862ec`, `8599cd7` | 7/7 tests passing, in-depth research report, multi-source financial reconciliation bot, CSV/JSON/audit log outputs |
-| **Task 8** | Cron Jobs Research & Practical Implementation | Pending | — | — |
+| **Task 8** | Cron Jobs Research & Practical Implementation | **Completed (Cron Pending Review)** | `d8ef068`, `be7b451`, `358b6ef` | 8/8 tests passing, in-depth research report, backup & retention rotator bot, SHA-256 verification, crontab entry prepared for review |
 
 ---
 
@@ -91,12 +91,13 @@ This document tracks implementation status, verification results, and commit his
   - [x] Task README and individual commits
 
 ### Phase 6 — Cron Jobs (Task 8)
-- [ ] **Task 8: Cron Jobs Research & Practical Implementation**
-  - [ ] Complete comprehensive Cron research (all 5 fields explained)
-  - [ ] Implement automated backup and rotation task
-  - [ ] Provide safe `cron_setup.sh` script
-  - [ ] Capture crontab configuration and verified execution evidence
-  - [ ] Task README and individual commits
+- [x] **Task 8: Cron Jobs Research & Practical Implementation**
+  - [x] Complete comprehensive Cron research report in original wording (`research.md`) with 5 academic/industry citations and access dates
+  - [x] Implement automated backup and retention rotator bot (`main.py`) with SHA-256 integrity verification
+  - [x] Create absolute-path POSIX runner wrapper script (`run_backup_job.sh`)
+  - [x] Provide safe, non-destructive crontab inspection helper (`cron_setup.sh`)
+  - [x] 8 automated unit tests passing (`test_cron_backup.py`)
+  - [x] Task README and individual commits
 
 ### Phase 7 — Final Verification & Review
 - [ ] Run full project verification against assignment checklist
