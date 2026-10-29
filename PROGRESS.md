@@ -15,7 +15,7 @@ This document tracks implementation status, verification results, and commit his
 | **Task 4** | Carrefour Product Scraping | **Parser & Tests Done (Live Pending)** | `cced907`, `b2665e8`, `c1ffc0a` | 6/6 tests passing, parser & CSV/JSON exporter verified on synthetic fixture; live extraction pending user HTML export |
 | **Task 5** | Facebook Automation Using Selenium | **Completed** | `03ecfd2`, `2a80ce4`, `e105c67` | 8/8 tests passing, driver setup, composer staging, dry-run & interactive safety gate verified |
 | **Task 6** | Schedule Automatic Code Execution (15:00) | **Script & Tests Verified (Cron Pending Review)** | `ee7d08b`, `3305b87`, `041bbf2` | 6/6 tests passing, manual execution verified, crontab expression prepared for review |
-| **Task 7** | RPA Research & Practical Workflow | Pending | — | — |
+| **Task 7** | RPA Research & Practical Workflow | **Completed** | `c471577`, `67862ec`, `8599cd7` | 7/7 tests passing, in-depth research report, multi-source financial reconciliation bot, CSV/JSON/audit log outputs |
 | **Task 8** | Cron Jobs Research & Practical Implementation | Pending | — | — |
 
 ---
@@ -82,11 +82,13 @@ This document tracks implementation status, verification results, and commit his
   - [x] Task README and individual commits
 
 ### Phase 5 — Robotic Process Automation (Task 7)
-- [ ] **Task 7: RPA Research & Practical Task**
-  - [ ] Complete in-depth RPA research report in original wording
-  - [ ] Design and implement practical automated data reorganization workflow
-  - [ ] Document workflow in `workflow.md` with sample data and execution evidence
-  - [ ] Task README and individual commits
+- [x] **Task 7: RPA Research & Practical Task**
+  - [x] Complete in-depth RPA research report in original wording (`research.md`) with 5 academic/industry citations and access dates
+  - [x] Design practical multi-source financial reconciliation workflow (`workflow.md`) with Mermaid process diagram
+  - [x] Implement autonomous RPA bot in Python (`main.py`) with data cleaning, VAT calculation, net balance, and high-value audit flags
+  - [x] Produce standardized CSV ledger (`output/reconciled_ledger.csv`), executive JSON report (`output/reconciliation_report.json`), and audit trail log (`output/audit_log.txt`)
+  - [x] 7 automated unit tests passing (`test_rpa_workflow.py`)
+  - [x] Task README and individual commits
 
 ### Phase 6 — Cron Jobs (Task 8)
 - [ ] **Task 8: Cron Jobs Research & Practical Implementation**
