@@ -17,16 +17,18 @@ During pre-implementation network probing, Carrefour Middle East portals (`carre
    </html>
    ```
 2. **Akamai EdgeSuite Challenges**: Headless Chrome sessions are blocked with `Service Unavailable - DNS failure` and an injected Akamai sensor overlay script (`#sec-overlay`).
-3. **Assignment Compliance**: In accordance with the assignment guidelines:
+3. **Assignment Compliance & Data Integrity**:
    - We do not bypass anti-bot protections or inject unauthorized evasion scripts.
-   - We do not invent fake product names, prices, or discounts.
-   - The scraper operates on an **authorized saved category HTML export** (`Ctrl+S` from your real browser) or uses the verified educational category fixture provided in [`data/sample_carrefour_category.html`](./data/sample_carrefour_category.html).
+   - We do not invent fake product names, prices, or discounts and claim they are live scraped data.
+   - **Synthetic Fixture Distinction**: The 10 products provided in [`data/sample_carrefour_category.html`](./data/sample_carrefour_category.html) are **synthetic test fixture data** crafted for offline parser development and automated unit tests. They are **NOT** live scraped or authentic Carrefour database records.
+   - **Status of Live Extraction**: Live extraction remains **Pending** until an authorized user browser HTML export (`data/carrefour_category.html`) is provided.
+   - When run without a user export, [`main.py`](./main.py) explicitly identifies itself as operating in **Offline Synthetic Fixture Mode**.
 
 ---
 
 ## How to Save & Use Your Own Carrefour Category Page
 
-To scrape a live category from Carrefour Egypt:
+To extract live products from a real Carrefour category page:
 
 1. Open your desktop web browser and visit a Carrefour category page, such as:
    ```text
@@ -37,9 +39,9 @@ To scrape a live category from Carrefour Egypt:
    ```text
    task-04-carrefour-scraper/data/carrefour_category.html
    ```
-4. Run [`main.py`](./main.py). The scraper will immediately detect the file, parse the products, and export them.
+4. Run [`main.py`](./main.py). The scraper will immediately detect the file, parse the live products, and export them with live extraction status marked as completed.
 
-*(Note: If `data/carrefour_category.html` is not present, the script automatically parses [`data/sample_carrefour_category.html`](./data/sample_carrefour_category.html), which models real Carrefour Egypt product cards).*
+*(Note: If `data/carrefour_category.html` is not provided, the script runs in offline demonstration mode using [`data/sample_carrefour_category.html`](./data/sample_carrefour_category.html), with terminal banners and metadata explicitly labeling the results as synthetic test fixture data).*
 
 ---
 
@@ -110,18 +112,29 @@ python task-04-carrefour-scraper/tests/test_carrefour_scraper.py -v
 
 ## Example Output
 
-### Terminal Output:
+### Terminal Output (Offline Synthetic Fixture Mode):
 ```text
+===========================================================================
+[OFFLINE TEST MODE] No personal Carrefour export found at data/carrefour_category.html.
+Using the local synthetic test fixture: data/sample_carrefour_category.html
+IMPORTANT: These products are SYNTHETIC test data for parser verification.
+Live HTTP scraping is blocked by Akamai Bot Manager (empty 53-byte body / DNS challenge).
+To extract live products, open Carrefour in your browser, press Ctrl+S,
+and place the saved HTML at: .../data/carrefour_category.html
+===========================================================================
+
 Parsing Carrefour category products using BeautifulSoup...
-Extracted 10 distinct product records.
+Extracted 10 synthetic test product records.
 Products successfully exported to:
   - CSV : .../task-04-carrefour-scraper/output/products.csv
   - JSON: .../task-04-carrefour-scraper/output/products.json
 
 ===========================================================================
-CARREFOUR PRODUCT SCRAPING SUMMARY
+CARREFOUR PRODUCT SCRAPING SUMMARY [OFFLINE SYNTHETIC FIXTURE]
 ===========================================================================
-Data Source       : sample_fixture
+Data Source       : synthetic_sample_fixture
+Data Authenticity : SYNTHETIC TEST FIXTURE (NOT Live Carrefour Data)
+Live Extraction   : PENDING (Requires user-saved data/carrefour_category.html)
 Total Products    : 10
 Discounted Items  : 5
 ---------------------------------------------------------------------------

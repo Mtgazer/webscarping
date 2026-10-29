@@ -1,8 +1,12 @@
 {
   "input_source": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-04-carrefour-scraper/data/sample_carrefour_category.html",
-  "source_type": "sample_fixture",
+  "source_type": "synthetic_sample_fixture",
+  "is_live_scraped": false,
+  "is_synthetic_fixture": true,
+  "live_extraction_status": "pending_user_html_export",
   "total_products": 10,
   "discounted_products": 5,
   "csv_output": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-04-carrefour-scraper/output/products.csv",
-  "json_output": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-04-carrefour-scraper/output/products.json"
+  "json_output": "/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse/task-04-carrefour-scraper/output/products.json",
+  "note": "Extracted from local synthetic test fixture for offline parser and test verification. Real Carrefour HTTP access is blocked by Akamai Bot Manager."
 }

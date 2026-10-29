@@ -12,7 +12,7 @@ This document tracks implementation status, verification results, and commit his
 | **Task 1** | Basic Website Scraping | **Completed** | `0620481`, `86a6d09`, `9d8529d`, `e69e49a` | 6/6 tests passing, 73 links, 21 headings in JSON |
 | **Task 2** | Image Scraping | **Completed** | `1243508`, `2a7979e`, `f3cfea3`, `88e6880` | 7/7 tests passing, 10 genuine JPEGs downloaded, manifest JSON saved |
 | **Task 3** | YouTube Subscription Information | **Completed** | `0add279`, `9a686d4`, `753a915`, `de48f42`, `f6af320` | 7/7 tests passing, 8 channels extracted to Pandas & CSV |
-| **Task 4** | Carrefour Product Scraping | **Completed** | `cced907`, `b2665e8`, `c1ffc0a` | 6/6 tests passing, 10 products parsed with bonus fields, CSV/JSON exported |
+| **Task 4** | Carrefour Product Scraping | **Parser & Tests Done (Live Pending)** | `cced907`, `b2665e8`, `c1ffc0a` | 6/6 tests passing, parser & CSV/JSON exporter verified on synthetic fixture; live extraction pending user HTML export |
 | **Task 5** | Facebook Automation Using Selenium | Pending | — | — |
 | **Task 6** | Schedule Automatic Code Execution (15:00) | Pending | — | — |
 | **Task 7** | RPA Research & Practical Workflow | Pending | — | — |
@@ -54,12 +54,13 @@ This document tracks implementation status, verification results, and commit his
   - [x] Document authorized access compliance and limitations
   - [x] Task README and individual commits
 - [x] **Task 4: Carrefour Product Scraping**
-  - [x] Target category page catalog
+  - [x] Implement product card DOM parser with BeautifulSoup (`main.py`)
   - [x] Extract Product Name, Price, Product URL
-  - [x] Extract bonus fields if accessible (Image, Discount Price, Category)
-  - [x] Export to CSV and JSON
-  - [x] Respect rate limits and document anti-bot behavior
-  - [x] Task README and individual commits
+  - [x] Extract bonus fields (Image, Discount Price, Category)
+  - [x] Export to CSV and JSON via Pandas
+  - [x] Document Akamai Bot Manager (`AkamaiGHost`) limitations honestly
+  - [x] Build and verify offline unit test suite (6/6 passing) on synthetic fixture
+  - [ ] Live Carrefour extraction (Pending: requires user-saved `data/carrefour_category.html` due to Akamai edge blocking)
 
 ### Phase 3 — Browser Automation (Task 5)
 - [ ] **Task 5: Facebook Automation Using Selenium**

@@ -136,12 +136,21 @@ def save_results(products: list[dict], csv_path: str, json_path: str) -> None:
         json.dump(products, f, indent=2, ensure_ascii=False)
 
 
-def display_summary(products: list[dict], source_info: str) -> None:
+def display_summary(products: list[dict], source_info: str, is_synthetic: bool = False) -> None:
     """Print readable terminal table and summary statistics."""
     print("=" * 75)
-    print("CARREFOUR PRODUCT SCRAPING SUMMARY")
+    header_title = "CARREFOUR PRODUCT SCRAPING SUMMARY"
+    if is_synthetic:
+        header_title += " [OFFLINE SYNTHETIC FIXTURE]"
+    print(header_title)
     print("=" * 75)
     print(f"Data Source       : {source_info}")
+    if is_synthetic:
+        print("Data Authenticity : SYNTHETIC TEST FIXTURE (NOT Live Carrefour Data)")
+        print("Live Extraction   : PENDING (Requires user-saved data/carrefour_category.html)")
+    else:
+        print("Data Authenticity : REAL USER BROWSER EXPORT")
+        print("Live Extraction   : COMPLETED")
     print(f"Total Products    : {len(products)}")
     discounted_count = sum(1 for p in products if p["discount_price"] != "N/A")
     print(f"Discounted Items  : {discounted_count}")
@@ -168,14 +177,21 @@ def main() -> None:
     if os.path.exists(user_file):
         input_path = user_file
         source_type = "user_saved_export"
-        print(f"Loading user saved Carrefour category export: {user_file}")
+        is_synthetic = False
+        print("=" * 75)
+        print("INPUT: Detected real user Carrefour category export at:")
+        print(f"       {user_file}")
+        print("=" * 75 + "\n")
     elif os.path.exists(sample_file):
         input_path = sample_file
-        source_type = "sample_fixture"
+        source_type = "synthetic_sample_fixture"
+        is_synthetic = True
         print("=" * 75)
-        print("NOTICE: No personal Carrefour export found at data/carrefour_category.html.")
-        print("Using the verified sample category fixture: data/sample_carrefour_category.html")
-        print("To scrape your own category page, open Carrefour in your browser, press Ctrl+S,")
+        print("[OFFLINE TEST MODE] No personal Carrefour export found at data/carrefour_category.html.")
+        print("Using the local synthetic test fixture: data/sample_carrefour_category.html")
+        print("IMPORTANT: These products are SYNTHETIC test data for parser verification.")
+        print("Live HTTP scraping is blocked by Akamai Bot Manager (empty 53-byte body / DNS challenge).")
+        print("To extract live products, open Carrefour in your browser, press Ctrl+S,")
         print(f"and place the saved HTML at: {user_file}")
         print("=" * 75 + "\n")
     else:
@@ -187,7 +203,8 @@ def main() -> None:
 
     print(f"Parsing Carrefour category products using BeautifulSoup...")
     products = extract_products(html_content)
-    print(f"Extracted {len(products)} distinct product records.")
+    mode_label = "synthetic test" if is_synthetic else "live"
+    print(f"Extracted {len(products)} {mode_label} product records.")
 
     save_results(products, output_csv, output_json)
     print(f"Products successfully exported to:\n  - CSV : {output_csv}\n  - JSON: {output_json}")
@@ -196,16 +213,24 @@ def main() -> None:
     summary = {
         "input_source": input_path,
         "source_type": source_type,
+        "is_live_scraped": not is_synthetic,
+        "is_synthetic_fixture": is_synthetic,
+        "live_extraction_status": "completed_from_user_export" if not is_synthetic else "pending_user_html_export",
         "total_products": len(products),
         "discounted_products": sum(1 for p in products if p["discount_price"] != "N/A"),
         "csv_output": output_csv,
-        "json_output": output_json
+        "json_output": output_json,
+        "note": (
+            "Extracted from user-provided browser HTML export."
+            if not is_synthetic
+            else "Extracted from local synthetic test fixture for offline parser and test verification. Real Carrefour HTTP access is blocked by Akamai Bot Manager."
+        )
     }
     with open(output_summary, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
 
     print()
-    display_summary(products, source_info=source_type)
+    display_summary(products, source_info=source_type, is_synthetic=is_synthetic)
 
 
 if __name__ == "__main__":
