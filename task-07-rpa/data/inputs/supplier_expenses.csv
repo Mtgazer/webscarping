@@ -1,0 +1,9 @@
+InvoiceID,Date,Vendor,Category,Total_Amount,Status
+INV-201,2026-10-02,AWS Cloud Hosting,Cloud Infrastructure,"$1,850.00",Paid
+INV-202,2026-10-03,Office Depot Cairo,Office Supplies,"$320.50",Paid
+INV-203,2026-10-05,Vodafone Business,Telecommunications,"$450.00",Paid
+INV-204,2026-10-08,Dell Technologies,Hardware Equipment,"$6,200.00",Paid
+INV-205,2026-10-11,LinkedIn Talent,Recruitment & HR,"$800.00",Paid
+INV-206,2026-10-14,Google Cloud Platform,Cloud Infrastructure,"$2,100.00",Paid
+INV-207,2026-10-16,FastTrack Courier,Logistics & Shipping,"$145.00",Paid
+INV-208,2026-10-18,WeWork Workspace,Office Space Rental,"$3,500.00",Pending

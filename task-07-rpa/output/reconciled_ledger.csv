@@ -1,0 +1,17 @@
+transaction_id,date,type,counterparty,category,gross_amount,estimated_tax,net_balance,status,flagged_high_value
+SO-1001,2026-10-01,REVENUE,Acme Corporation,Software Licenses,6000.0,840.0,6000.0,Completed,True
+INV-201,2026-10-02,EXPENSE,AWS Cloud Hosting,Cloud Infrastructure,1850.0,259.0,-1850.0,Paid,False
+SO-1002,2026-10-02,REVENUE,Global Tech Solutions,Hardware Equipment,4901.0,686.14,4901.0,Completed,False
+INV-202,2026-10-03,EXPENSE,Office Depot Cairo,Office Supplies,320.5,44.87,-320.5,Paid,False
+SO-1003,2026-10-04,REVENUE,Nile Media Agency,Consulting Services,1500.0,210.0,1500.0,Completed,False
+INV-203,2026-10-05,EXPENSE,Vodafone Business,Telecommunications,450.0,63.0,-450.0,Paid,False
+SO-1004,2026-10-05,REVENUE,Cairo Logistics Hub,Software Licenses,4800.0,672.0,4800.0,Completed,False
+SO-1005,2026-10-07,REVENUE,Apex Engineering,Cloud Infrastructure,9000.0,1260.0,9000.0,Completed,True
+INV-204,2026-10-08,EXPENSE,Dell Technologies,Hardware Equipment,6200.0,868.0,-6200.0,Paid,True
+SO-1006,2026-10-10,REVENUE,Delta Innovations,Hardware Equipment,7200.0,1008.0,7200.0,Completed,True
+INV-205,2026-10-11,EXPENSE,LinkedIn Talent,Recruitment & HR,800.0,112.0,-800.0,Paid,False
+SO-1007,2026-10-12,REVENUE,Smart Retail Group,Consulting Services,1280.0,179.2,1280.0,Pending,False
+INV-206,2026-10-14,EXPENSE,Google Cloud Platform,Cloud Infrastructure,2100.0,294.0,-2100.0,Paid,False
+SO-1008,2026-10-15,REVENUE,Horizon Health,Cloud Infrastructure,3300.0,462.0,3300.0,Completed,False
+INV-207,2026-10-16,EXPENSE,FastTrack Courier,Logistics & Shipping,145.0,20.3,-145.0,Paid,False
+INV-208,2026-10-18,EXPENSE,WeWork Workspace,Office Space Rental,3500.0,490.0,-3500.0,Pending,False

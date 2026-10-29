@@ -1,0 +1,9 @@
+Order_Number,Order_Date,Customer_Name,Item_Category,Quantity,Unit_Price,Payment_Status
+SO-1001,2026-10-01,Acme Corporation,Software Licenses,5,"$1,200.00",Completed
+SO-1002,2026-10-02,Global Tech Solutions,Hardware Equipment,2,"$2,450.50",Completed
+SO-1003,2026-10-04,Nile Media Agency,Consulting Services,10,"$150.00",Completed
+SO-1004,2026-10-05,Cairo Logistics Hub,Software Licenses,1,"$4,800.00",Completed
+SO-1005,2026-10-07,Apex Engineering,Cloud Infrastructure,12,"$750.00",Completed
+SO-1006,2026-10-10,Delta Innovations,Hardware Equipment,1,"$7,200.00",Completed
+SO-1007,2026-10-12,Smart Retail Group,Consulting Services,4,"$320.00",Pending
+SO-1008,2026-10-15,Horizon Health,Cloud Infrastructure,3,"$1,100.00",Completed

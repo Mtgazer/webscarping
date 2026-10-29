@@ -1,0 +1,22 @@
+{
+  "execution_timestamp": "2026-10-29 11:11:49 EEST",
+  "total_transactions": 16,
+  "total_revenue": 37981.0,
+  "total_expenses": 15365.5,
+  "net_cash_flow": 22615.5,
+  "total_estimated_tax": 7468.51,
+  "high_value_flagged_count": 4,
+  "category_summary": {
+    "EXPENSE: Cloud Infrastructure": 3950.0,
+    "EXPENSE: Hardware Equipment": 6200.0,
+    "EXPENSE: Logistics & Shipping": 145.0,
+    "EXPENSE: Office Space Rental": 3500.0,
+    "EXPENSE: Office Supplies": 320.5,
+    "EXPENSE: Recruitment & HR": 800.0,
+    "EXPENSE: Telecommunications": 450.0,
+    "REVENUE: Cloud Infrastructure": 12300.0,
+    "REVENUE: Consulting Services": 2780.0,
+    "REVENUE: Hardware Equipment": 12101.0,
+    "REVENUE: Software Licenses": 10800.0
+  }
+}
