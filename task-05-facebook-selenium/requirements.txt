@@ -1,0 +1,3 @@
+# Task 5 — Facebook Automation Using Selenium Dependencies
+selenium>=4.20.0
+python-dotenv>=1.0.0

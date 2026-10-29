@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Facebook - Home</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffffff;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      color: #1877f2;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .user-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+    .user-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #1877f2;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main {
+      max-width: 600px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    .feed-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      margin-bottom: 16px;
+    }
+    .create-post-trigger {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .trigger-input {
+      background-color: #f0f2f5;
+      border-radius: 20px;
+      padding: 10px 16px;
+      flex-grow: 1;
+      color: #65676b;
+      cursor: pointer;
+      user-select: none;
+    }
+    .trigger-input:hover {
+      background-color: #e4e6e9;
+    }
+    /* Dialog modal */
+    .dialog-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .dialog-box {
+      background-color: #ffffff;
+      border-radius: 8px;
+      width: 500px;
+      max-width: 90%;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+    }
+    .dialog-header {
+      padding: 16px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      border-bottom: 1px solid #dadde1;
+      position: relative;
+    }
+    .dialog-close {
+      position: absolute;
+      right: 16px;
+      top: 14px;
+      cursor: pointer;
+      font-size: 22px;
+      color: #65676b;
+      border: none;
+      background: none;
+    }
+    .dialog-body {
+      padding: 16px;
+    }
+    .post-editor {
+      width: 100%;
+      min-height: 120px;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #050505;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .post-editor:empty:before {
+      content: "What's on your mind?";
+      color: #65676b;
+    }
+    .dialog-footer {
+      padding: 16px;
+      border-top: 1px solid #dadde1;
+    }
+    .publish-btn {
+      width: 100%;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+    }
+    .publish-btn:hover {
+      background-color: #166fe5;
+    }
+    .publish-btn:disabled {
+      background-color: #e4e6eb;
+      color: #bcc0c4;
+      cursor: not-allowed;
+    }
+    .post-result {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 6px;
+      display: none;
+    }
+    .post-result.success {
+      display: block;
+      background-color: #e7f3ff;
+      color: #1877f2;
+      border: 1px solid #1877f2;
+    }
+    .post-result.cancelled {
+      display: block;
+      background-color: #fde8e8;
+      color: #9b1c1c;
+      border: 1px solid #f8b4b4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">facebook</div>
+    <div class="user-badge" id="user-profile-badge">
+      <div class="user-avatar">IK</div>
+      <span>Authorized User</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="feed-card">
+      <div class="create-post-trigger" id="create-post-trigger" role="button" aria-label="Create a post" tabindex="0">
+        <div class="user-avatar">IK</div>
+        <div class="trigger-input" id="trigger-input-placeholder">What's on your mind?</div>
+      </div>
+    </div>
+
+    <div id="post-status" class="post-result"></div>
+  </main>
+
+  <!-- Create Post Modal Dialog -->
+  <div class="dialog-overlay" id="dialog-overlay">
+    <div class="dialog-box" role="dialog" aria-label="Create a post">
+      <div class="dialog-header">
+        Create post
+        <button class="dialog-close" id="dialog-close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <div class="user-badge" style="margin-bottom: 12px;">
+          <div class="user-avatar">IK</div>
+          <div>
+            <div>Authorized User</div>
+            <small style="color: #65676b;">Public</small>
+          </div>
+        </div>
+        <div
+          class="post-editor"
+          id="post-composer-textbox"
+          role="textbox"
+          contenteditable="true"
+          aria-label="What's on your mind?"
+          tabindex="0"
+        ></div>
+      </div>
+      <div class="dialog-footer">
+        <button
+          class="publish-btn"
+          id="publish-post-button"
+          role="button"
+          aria-label="Post"
+        >Post</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const trigger = document.getElementById('create-post-trigger');
+    const overlay = document.getElementById('dialog-overlay');
+    const closeBtn = document.getElementById('dialog-close-btn');
+    const editor = document.getElementById('post-composer-textbox');
+    const publishBtn = document.getElementById('publish-post-button');
+    const statusBox = document.getElementById('post-status');
+
+    trigger.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+      editor.focus();
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      editor.innerText = '';
+      statusBox.className = 'post-result cancelled';
+      statusBox.innerText = 'Draft discarded. Post cancelled by user.';
+    });
+
+    publishBtn.addEventListener('click', () => {
+      const text = editor.innerText.trim();
+      if (!text) {
+        alert('Please enter post text.');
+        return;
+      }
+      overlay.style.display = 'none';
+      editor.innerText = '';
+      statusBox.className = 'post-result success';
+      statusBox.innerText = 'Post published successfully: "' + text + '"';
+    });
+  </script>
+</body>
+</html>
