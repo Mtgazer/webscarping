@@ -43,3 +43,5 @@ subscriptions.html
 task-04-carrefour-scraper/data/carrefour_category.html
 task-04-carrefour-scraper/data/carrefour_category*.html
 !task-04-carrefour-scraper/data/sample_carrefour_category.html
+# Runtime cron job execution logs
+*cron_stdout.log

@@ -19,7 +19,7 @@ session-10-automation/
 ├── task-05-facebook-selenium/      # Task 5: Facebook Browser Automation with Safety Approval
 ├── task-06-daily-scheduler/        # Task 6: 15:00 Daily Cron Execution & Logging
 ├── task-07-rpa/                    # Task 7: RPA Research & Practical Business Workflow
-└── task-08-cron-jobs/              # Task 8: Cron Jobs Research, Setup & Automated Backups
+└── task-08-cron-research/          # Task 8: Cron Jobs Research, Setup & Automated Backups
 ```
 
 ---
@@ -74,7 +74,7 @@ python -m pip install -r requirements.txt
 | **Task 5** | [task-05-facebook-selenium](./task-05-facebook-selenium/) | Selenium, Browser Automation | Authenticated navigation and post preparation with mandatory user approval gate. |
 | **Task 6** | [task-06-daily-scheduler](./task-06-daily-scheduler/) | Linux Cron, System Automation | Autonomous daily task scheduled at 15:00 (3:00 PM) with persistent logging. |
 | **Task 7** | [task-07-rpa](./task-07-rpa/) | RPA Concepts, Business Workflow | In-depth RPA research report and automated multi-file audit/data reorganization bot. |
-| **Task 8** | [task-08-cron-jobs](./task-08-cron-jobs/) | Linux Crontab, System Maintenance | Complete Cron research (5 fields explained) and automated backup script. |
+| **Task 8** | [task-08-cron-research](./task-08-cron-research/) | Linux Crontab, System Maintenance | Complete Cron research (5 fields explained) and automated backup script. |
 
 ---
 

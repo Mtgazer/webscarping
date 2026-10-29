@@ -7,14 +7,15 @@
 
 set -euo pipefail
 
-# Absolute repository root and virtual environment paths
-REPO_DIR="/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse"
+# Dynamically resolve absolute repository root and script paths
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 PYTHON_BIN="$REPO_DIR/.venv/bin/python"
-SCRIPT_PATH="$REPO_DIR/task-08-cron-research/main.py"
-SOURCE_DIR="$REPO_DIR/task-08-cron-research/data/sample_payload"
-BACKUP_DIR="$REPO_DIR/task-08-cron-research/backups"
-LOG_FILE="$REPO_DIR/task-08-cron-research/logs/backup_rotation.log"
-MANIFEST_FILE="$REPO_DIR/task-08-cron-research/output/backup_manifest.json"
+SCRIPT_PATH="$SCRIPT_DIR/main.py"
+SOURCE_DIR="$SCRIPT_DIR/data/sample_payload"
+BACKUP_DIR="$SCRIPT_DIR/backups"
+LOG_FILE="$SCRIPT_DIR/logs/backup_rotation.log"
+MANIFEST_FILE="$SCRIPT_DIR/output/backup_manifest.json"
 
 # Validate interpreter and script exist
 if [[ ! -x "$PYTHON_BIN" ]]; then

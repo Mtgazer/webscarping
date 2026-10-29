@@ -7,9 +7,10 @@
 
 set -euo pipefail
 
-REPO_DIR="/run/media/ibrahim-khalil/New Volume/Ibrahim/AI Course/webscarpingse"
-RUNNER_PATH="$REPO_DIR/task-08-cron-research/run_backup_job.sh"
-LOG_STDOUT="$REPO_DIR/task-08-cron-research/logs/cron_stdout.log"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+RUNNER_PATH="$SCRIPT_DIR/run_backup_job.sh"
+LOG_STDOUT="$SCRIPT_DIR/logs/cron_stdout.log"
 
 PROPOSED_ENTRY="0 2 * * * \"$RUNNER_PATH\" >> \"$LOG_STDOUT\" 2>&1"
 
